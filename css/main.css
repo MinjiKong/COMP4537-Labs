@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: beige;
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    margin: 5px;
+}
+
+.button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background-color: lightseagreen;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; 
+    line-height: 50px; 
+}
+    
+.button:hover {
+    background-color: darkcyan;
+}

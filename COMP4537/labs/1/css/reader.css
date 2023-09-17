@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: beige;
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0;
+}
+
+#backbutton {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #005aff;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+#backbutton:hover {
+    background-color: #3348cc;
+}
+
+#notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.noteDiv {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    width: 400px;
+    height: 150px;
+    margin: 10px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f6f6;
+    resize: none;
+}
