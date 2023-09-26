@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
     loadNotes(true, lastSavedSpan);
 });
 
-
 const addButton = document.getElementById('add-button');
 addButton.addEventListener('click', () => {
     const note = new Note(true);
