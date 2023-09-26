@@ -22,8 +22,6 @@ http.createServer(function (req, res){
                 res.end("Successfully appended the text to file.txt");
             }
         });
-        res.writeHead(200, {"Content-Type":"text/html; charset=UTF-8"});
-        res.end();
     } else if (q.pathname.startsWith('/readFile')) {
         const pathArray = q.pathname.split('/');
         const filename = pathArray[2];
