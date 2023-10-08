@@ -53,7 +53,7 @@ function post() {
 
 function get() {
     const xhttp = new XMLHttpRequest();
-    const wordInput = document.getElementById("word").value;
+    const word = document.getElementById("word").value;
 
     if (!word.match(/^[A-Za-z]+$/)) {
         alert("Please enter a valid word (only letters and spaces).");
