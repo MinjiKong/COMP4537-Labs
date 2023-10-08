@@ -3,6 +3,10 @@ function post() {
     const word = document.getElementById("word").value;
     const definition = document.getElementById("definition").value;
 
+    if (!word.match(/^[A-Za-z]+$/)) {
+        alert("Please enter a valid word (only letters and spaces).");
+    }
+
     const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}&definition=${definition}`;
     
     const existingElements = ["msg", "newEntry", "linebreak"];
@@ -49,7 +53,9 @@ function post() {
 
 function get() {
     const xhttp = new XMLHttpRequest();
-    const word = document.getElementById("word").value;
+    const wordInput = document.getElementById("word").value;
+
+    const word = wordInput.trim();
 
     const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}`;
 
