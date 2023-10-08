@@ -55,7 +55,9 @@ function get() {
     const xhttp = new XMLHttpRequest();
     const wordInput = document.getElementById("word").value;
 
-    const word = wordInput.trim();
+    if (!word.match(/^[A-Za-z]+$/)) {
+        alert("Please enter a valid word (only letters and spaces).");
+    }
 
     const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}`;
 
