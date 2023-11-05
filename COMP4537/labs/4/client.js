@@ -2,12 +2,12 @@ function post() {
     const xhttp = new XMLHttpRequest();
     const word = document.getElementById("word").value;
     const definition = document.getElementById("definition").value;
+    const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}&definition=${definition}`;
+    const alert = "Please enter a valid word (only letters and spaces).";
 
     if (!word.match(/^[A-Za-z]+$/)) {
-        alert("Please enter a valid word (only letters and spaces).");
+        alert(alert);
     }
-
-    const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}&definition=${definition}`;
     
     const existingElements = ["msg", "newEntry", "linebreak"];
     existingElements.forEach((elementId) => {
@@ -54,12 +54,12 @@ function post() {
 function get() {
     const xhttp = new XMLHttpRequest();
     const word = document.getElementById("word").value;
+    const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}`;
+    const alert = "Please enter a valid word (only letters and spaces).";
 
     if (!word.match(/^[A-Za-z]+$/)) {
-        alert("Please enter a valid word (only letters and spaces).");
+        alert(alert);
     }
-
-    const url = `https://apiworddefinition.onrender.com/api/definitions/?word=${word}`;
 
     const existingMessage = document.getElementById("msg");
     if (existingMessage) {
